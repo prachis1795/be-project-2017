@@ -1,0 +1,40 @@
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Flat UI Login Form 2</title> 
+        <link rel="stylesheet" href="style.css"> 
+        
+        
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.20//angular-route.min.js"></script>
+        <script type="javascript" src="index-js.js"></script>
+       <!--  <script src="angular.js"></script> -->
+        
+        
+    </head>
+
+<body ng-app="mainModule" ng-controller = "mainController">
+<div id="login">
+  <h1 id="header">Login</h1>
+  <form>
+  <div ng-controller="mainController">
+    <input type="text" placeholder="Username" id="username"></input><br />
+    <input type="password" placeholder="Password"
+             ng-keydown="onKeyDown($event)"
+             ng-keyup="onKeyUp($event)"
+             ng-keypress="onKeyPress($event)" />
+    <br />
+     <input type="button" value="Submit" id="button"></input>
+     <br><br></form>
+<span ng-style="myStyle">
+    <strong>KEY DOWN RESULT:</strong> {{onKeyDownResult}} <hr/><br /><br /><br /><br />
+    <strong>KEY UP RESULT:</strong> {{onKeyUpResult}} <hr/><br /><br /><br /><br />
+    <strong>KEY PRESS RESULT:</strong> {{onKeyPressResult}} <hr/><br /><br /><br /><br />
+    </span>   
+  </div>
+
+  </div>
+
+  <script type="javascript" src="index-js.js"></script>
+</body>
+</html>
